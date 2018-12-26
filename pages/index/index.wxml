@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<import src="../../wxSearch-master/wxSearch/wxSearch.wxml"/>
+
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" size='14' type='search'></icon>
+      <input class="weui-search-bar__input" type="text" placeholder='please input title' value='{{wxSearchata.value}}' bindfocus='wxSearchFocus' bindinput='wxSearchInput' bindblur='wzSearchBlur'/>
+      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+  </view>
+</view>
+<div class="weui-gallery <%= className %>">
+    <span class="weui-gallery__img" style="background-image: url(<%= url %>);"></span>
+    <div class="weui-gallery__opr">
+        <a href="javascript:" class="weui-gallery__del">
+            <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+        </a>
+    </div>
+</div>
